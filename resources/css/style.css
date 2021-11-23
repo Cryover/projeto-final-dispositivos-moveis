@@ -16,6 +16,11 @@
 }
 
 html {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
     background-color: #fff;
     /*Define a cor do fundo*/
     color: #555;
@@ -29,11 +34,23 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: #000;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
 
 /*Configurando minha linha do sistema de grid*/
 
 .row {
-    max-width: 1140px;
+    /*max-width: 1140px;*/
+    display: flex;
+    flex-wrap: nowrap;
+    max-width: auto;
     /*Define o tamanho máximo da linha*/
     margin: 0 auto 0 auto;
     /*Define que o container vai ficar centralizado*/
@@ -45,7 +62,7 @@ header {
     /*explore outras cores e transparências*/
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 0 auto;
     background-attachment: fixed;
     /*deixa a imagem fica no fundo, a imagem não acompanha a barra de rolagem*/
 }

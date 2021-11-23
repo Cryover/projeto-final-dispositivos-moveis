@@ -3,73 +3,155 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- CSS Styles -->
-    <link rel="stylesheet" href="css/style.css">
-    <title>Desafio Avengers</title>
+    <!-- Importação do nossa folha de estilo -->
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    <!-- Importação do normalize css para arrumar bugs -->
+    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+    <!-- Importação do sistema de grid -->
+    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+    <!-- Importação da fonte Lato -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&amp;subset=latin-ext" rel="stylesheet">
+    <!-- Adiciona a imagem favicon -->
+    <link rel="shortcut icon" href="vendors/css/img/favicon.png">
+
+
+    <title>Saúde no Prato</title>
 </head>
 
 <body>
-
-    <header class="header">
-        <a href="" class="logo">
-            <img src="images/avengers-logo.png" alt="Logo Avengers">
-        </a>
-        
+    <header>
         <nav>
-            <ul class="menu">
-                <li><a href="#galeria">Galeria</a></li>
-                <li><a href="#">Notícias</a></li>
-                <li><a href="#">Vídeos</a></li>
-            </ul>
-        </nav>
+            <div class="row">
+                <img src="vendors/css/img/logo.png" alt="saúde no prato logo" class="logo">
+                <ul class="main-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#funcionamento">Funcionamento</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+            <nav>
+                <div class="hero-text-box">
+                    <h1>Diga adeus a dores de cabeça quando for viajar <br> Viage com a Air Ryoko!</h1>
+                    <a class="btn btn-full" href="#comprar">Comprar agora</a>
+                    <a class="btn btn-ghost" href="#funcionamento">Mais informações</a>
+                </div>
     </header>
-
-    <section class="full-banner">
-        <h1>As escolhas mais difíceis requerem as vontades mais fortes. (Thanos)</h1>
-    </section>
-
-    <h2 id="galeria">Galeria</h2>
-
-    <section class="galeria">
-        <div>
-            <!-- Atenção ao texto alternativo para tecnologias assistivas. 
-                 Procure sempre fazer uma boa descrição da imagens passando informações relevantes. -->
-            <img src="images/avengers-01.jpg" alt="">
-            <p>Legenda</p>
+    <section id="funcionamento" class="section">
+        <div class="row">
+            <h2>Faça viagens sem ter dores de cabeça &mdash; Deixe elas em casa!</h2>
+            <p class="long-copy">
+                Nós da Air Ryoko procuramos proporcionar a melhor qualidade possível pensando sempre no cliente.
+            </p>
         </div>
-
-        <div>
-            <img src="images/avengers-02.jpg" alt="">
-            <p>Legenda</p>
-        </div>
-
-        <div>
-            <img src="images/avengers-03.jpg" alt="">
-            <p>Legenda</p>
-        </div>
-
-        <div>
-            <img src="images/avengers-04.jpg" alt="">
-            <p>Legenda</p>
-        </div>
-        
-        <div>
-            <img src="images/avengers-05.jpg" alt="">
-            <p>Legenda</p>
-        </div>
-        <div>
-            <img src="images/avengers-06.jpg" alt="">
-            <p>Legenda</p>
+        <div class="row">
+            <div class="col span-1-of-4 box">
+                <ion-icon name="airplane-outline"></ion-icon>
+                <h3>Viagem Segura</h3>
+                <p>
+                    Nossos aviões são equipados com a mais nova tecnologia de ponta, preparados para atender qualquer necessidade que nosso cliente venha a ter!
+                </p>
+            </div>
+            <div class="col span-1-of-4 box">
+                <ion-icon name="moon-outline"></ion-icon>
+                <h3>Estadia incluida</h3>
+                <p>
+                    Não sabe qual hotel ficar? no pacote oferece diversos hoteis dentro do pacote e você escolhe o lugar.
+                </p>
+            </div>
+            <div class="col span-1-of-4 box">
+                <ion-icon name="heart-circle-outline"></ion-icon>
+                <h3>Plano de Saúde</h3>
+                <p>
+                    Está íncluido do pacote um plano de saúde para que caso você necessite de atendimento médico. Possuimos cobertura por todo japão!
+                </p>
+            </div>
+            <div class="col span-1-of-4 box">
+                <ion-icon name="paw-outline"></ion-icon>
+                <h3>Pet Friendly</h3>
+                <p>Não deixe seus pets fora dessa, nossa empresa não apenas aceita seus pets nas viagens como também se preocupa com o seu bem estar durante a viagem.</p>
+            </div>
         </div>
     </section>
+    <section id="galeria" class="section">
+        <ul class="images-showcase">
+            <li>
+                <figure class="photo">
+                    <img src="resources/img/dotonbori.jpg" alt="Travessia em Dotonbori" title="Travessia em Dotonbori" />
+                </figure>
+            </li>
+            <li>
+                <figure class="photo">
+                    <img src="resources/img/pagode_chureito.jpg" alt="Pagode de Chureito" title="Pagode de Chureito" />
+                </figure>
+            </li>
+            <li>
+                <figure class="photo">
+                    <img src="resources/img/rua_de_shibuya.jpg" alt="Rua de Shibuya" title="Rua de Shibuya" />
+                </figure>
+            </li>
+            <li>
+                <figure class="photo">
+                    <img src="resources/img/restaurante-tokyo.jpg" alt="Restaurante em Tokyo" title="Restaurante em Tokyo" />
+                </figure>
+            </li>
+            <li>
+                <figure class="photo">
+                    <img src="resources/img/rua_de_akabane.jpg" alt="Rua de Akabane" title="Rua de Akabane" />
+                </figure>
+            </li>
+            <li>
+                <figure class="photo">
+                    <img src="resources/img/rua_de_setagaya.jpg" alt="Rua de Setagaya" title="Rua de Setagaya" />
+                </figure>
+            </li>
+            <li>
+                <figure class="photo">
+                    <img src="resources/img/rua_de_tokyo.jpg" alt="Rua de Tokyo" title="Rua de Tokyo" />
+                </figure>
+            </li>
+            <li>
+                <figure class="photo">
+                    <img src="resources/img/shopping_em_tokyo.jpg" alt="Shopping em Tokyo" title="Shopping em Tokyo" />
+                </figure>
+            </li>
+        </ul>
+    </section>
 
-    <footer>
-        <p>Desafio de codificação de interface responsiva proposto na aula de <strong>CSS Flexbox</strong> ministrada para alunos da Faculdade Senac Porto Alegre.</p>
-        <p>Disciplina: Desenvolvimento Web para Dispositivos Móveis.</p>
-        <p>Design e desenvolvimento: <strong>Marcelo Pereira</strong></p>
-    </footer>
-
+    <section id="comentarios" class="section-testimonials">
+        <div class="row">
+            <!-- Aqui irá o conteúdo da segunda div, organizado em 3 colunas -->
+            <div class="col span-1-of-3">
+                <!--Primeira coluna -->
+                <blockquote>
+                    Eu sempre tive dificuldades para achar uma empresa na qual oferecesse um pacote de viagem que incluisse tudo em uma coisa só e por sorte encontrei a Air Ryoko.
+                    <cite>
+                        <img src="resources/img/sofia.jpg"/>Sofia Valim Veiga
+                    </cite>
+                </blockquote>
+            </div>
+            <div class="col span-1-of-3">
+                <!--Segunda coluna -->
+                <blockquote>
+                    Sempre planejo minhas férias para os finais de ano mas ficar em função de ter que contratar diversos serviços diferentes atraplha meus planos mas com a Air Ryoko nunca mais terei esses problemas.
+                    <cite>
+                        <img src="resources/img/angelo.jpg"/>Angelo Barrico Linhares
+                    </cite>
+                </blockquote>
+            </div>
+            <div class="col span-1-of-3">
+                <!--Terceira coluna -->
+                <blockquote>
+                    Estava procurando uma empresa na qual possuise um pacote completo de viagem e estadia porém todos eram caros demais, mas a Air Ryoko me disponibilizou descontos especiais o que me fizeram escolhe-los!
+                    <cite>
+                        <img src="resources/img/alissa.jpg"/>Alissa Lessa Grande
+                    </cite>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>

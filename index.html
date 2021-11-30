@@ -15,10 +15,13 @@
     <!-- Importação da fonte Lato -->
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&amp;subset=latin-ext" rel="stylesheet">
     <!-- Adiciona a imagem favicon -->
-    <link rel="shortcut icon" href="vendors/css/img/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="vendors/css/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="vendors/css/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="vendors/css/img/favicon-16x16.png">
+    <link rel="manifest" href="vendors/css/img/site.webmanifest">
 
 
-    <title></title>
+    <title>GNC Cinemas</title>
 </head>
 
 <body>
@@ -26,11 +29,11 @@
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v12.0" nonce="LymXsJ2I"></script>
     <div class="container">
         <header>
-            <nav>
+            <nav id="navbar" class="navbar">
                 <div class="row">
                     <img src="vendors/css/img/logo.png" alt="saúde no prato logo" class="logo">
                     <ul class="main-nav">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Home</a></li>
                         <li><a href="#galeria">Funcionamento</a></li>
                         <li><a href="#diferencial">Galeria</a></li>
                         <li><a href="#planos">Planos</a></li>
@@ -50,24 +53,26 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="resources/img/banner_familiaAdams2.jpg" class="d-block w-100" alt="...">
+                        <img id="escurece" src="resources/img/banner_familiaAdams2.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>A Família Addams 2 - Pé na Estrada</h5>
                             <p>Os Addams se envolvem em aventuras mais malucas e se envolvem em confrontos hilariantes com todos os tipos de personagens desavisados..</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="resources/img/banner_familiaAdams2.jpg" class="d-block w-100" alt="...">
+                        <img id="escurece" src="resources/img/banner_ghostbusters.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
+                            <h5>Ghostbusters - Mais Além</h5>
+                            <p>
+                                Uma mãe solteira resolve se mudar para uma pequena cidade do interior com seus filhos, e acaba descobrindo uma conexão com os Caça-Fantasmas originais e o que o seu avô deixou para trás como legado.
+                            </p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="resources/img/banner_familiaAdams2.jpg" class="d-block w-100" alt="...">
+                        <img id="escurece" src="resources/img/banner_homem_aranha.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
+                            <h5>Homem-Aranha Sem Volta Para Casa</h5>
+                            <p>O Homem-Aranha precisa lidar com as consequências da sua verdadeira identidade ter sido descoberta.</p>
                         </div>
                     </div>
                 </div>
@@ -82,90 +87,8 @@
             </div>
         </section>
 
-        <section class="galeria">
-
-        </section>
-
-        <section class="diferencial">
-
-        </section>
-
-        <section class="planos">
-
-        </section>
-
-        <section class="cardapio">
-
-        </section>
-
-        <section class="contato">
-            <form></form>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="nome" placeholder="Nome Completo" required>
-                <label for="floatingInput">Nome Completo</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="email" placeholder="Endereço de Email" required>
-                <label for="floatingInput">Endereço de Email</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="tel" class="form-control" id="tel1" placeholder="Endereço de Email" required>
-                <label for="floatingInput">Telefone de Contato 1</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="tel" class="form-control" id="tel2" placeholder="Endereço de Email">
-                <label for="floatingInput">Telefone de Contato 2</label>
-            </div>
-            Possui Plano Mensal? <br>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label" for="flexRadioDefault1">
-              Sim
-            </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                <label class="form-check-label" for="flexRadioDefault2">
-              Não
-            </label>
-            </div>
-        </section>
-
-        <section id="funcionamento" class="section">
-
-            <div class="row">
-                <div class="col span-1-of-4 box">
-                    <ion-icon name="airplane-outline"></ion-icon>
-                    <h3>Viagem Segura</h3>
-                    <p>
-                        Nossos aviões são equipados com a mais nova tecnologia de ponta, preparados para atender qualquer necessidade que nosso cliente venha a ter!
-                    </p>
-                </div>
-                <div class="col span-1-of-4 box">
-                    <ion-icon name="moon-outline"></ion-icon>
-                    <h3>Estadia incluida</h3>
-                    <p>
-                        Não sabe qual hotel ficar? no pacote oferece diversos hoteis dentro do pacote e você escolhe o lugar.
-                    </p>
-                </div>
-                <div class="col span-1-of-4 box">
-                    <ion-icon name="heart-circle-outline"></ion-icon>
-                    <h3>Plano de Saúde</h3>
-                    <p>
-                        Está íncluido do pacote um plano de saúde para que caso você necessite de atendimento médico. Possuimos cobertura por todo japão!
-                    </p>
-                </div>
-                <div class="col span-1-of-4 box">
-                    <ion-icon name="paw-outline"></ion-icon>
-                    <h3>Pet Friendly</h3>
-                    <p>Não deixe seus pets fora dessa, nossa empresa não apenas aceita seus pets nas viagens como também se preocupa com o seu bem estar durante a viagem.</p>
-                </div>
-            </div>
-        </section>
-
-
-
-        <section id="galeria" class="section">
+        <section id="galeria">
+            <h2>Galeria</h2>
             <ul class="images-showcase">
                 <li>
                     <figure class="photo">
@@ -210,60 +133,128 @@
             </ul>
         </section>
 
-        <section id="comentarios" class="section-testimonials">
+        <section id="diferencial">
+            <h1>Typer.js is
+                <span class="typer" id="main" data-words="great,fun,lightweight,easy" data-delay="100" data-deleteDelay="1000"></span>
+                <span class="cursor" data-owner="main"></span>
+            </h1>
+            <p>the typing effect with a pure HTML interface</p>
+            <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
+        </section>
+
+        <section id="planos">
+            <h2>Planos</h2>
+        </section>
+
+        <section id="cardapio">
+            <h2>Cardápio</h2>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <form id="formulario_contato" action="php/envio.php" method="post">
+                <div>
+                    <div>
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" />
+                    </div>
+                    <div>
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" />
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <label for="telefone1">E-mail:</label>
+                        <input type="tel" id="telefone1" />
+                    </div>
+                    <div>
+                        <label for="telefone2">E-mail:</label>
+                        <input type="tel" id="telefone2" />
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <p>Possui nosso Plano Mensal?</p>
+                        <input type="radio" id="sim" name="plano_mensal" value="sim">
+                        <label for="sim">Sim</label><br>
+                        <input type="radio" id="nao" name="plano_mensal" value="nao">
+                        <label for="nao">Não</label><br>
+                    </div>
+                    <div>
+                        <label for="msg">Mensagem:</label>
+                        <textarea id="msg"></textarea>
+                    </div>
+                </div>
+            </form>
+
+        </section>
+
+        <section id="funcionamento">
+            <h2>Funcionamento</h2>
             <div class="row">
-                <!-- Aqui irá o conteúdo da segunda div, organizado em 3 colunas -->
-                <div class="col span-1-of-3">
-                    <!--Primeira coluna -->
-                    <blockquote>
-                        Eu sempre tive dificuldades para achar uma empresa na qual oferecesse um pacote de viagem que incluisse tudo em uma coisa só e por sorte encontrei a Air Ryoko.
-                        <cite>
-                        <img src="resources/img/sofia.jpg"/>Sofia Valim Veiga
-                    </cite>
-                    </blockquote>
+                <div class="col span-1-of-4 box">
+                    <ion-icon name="ticket-outline"></ion-icon>
+                    <h3>Terminais de venda automática de ingressos</h3>
+                    <p>
+                        Bilheteria informatizadas, vendas de ingressos pela internet, lugares marcados, débito em conta, são apenas alguns exemplos do que os espectadores se acostumaram a encontrar em primeira mão, nas salas do GNC CINEMAS.
+                    </p>
                 </div>
-                <div class="col span-1-of-3">
-                    <!--Segunda coluna -->
-                    <blockquote>
-                        Sempre planejo minhas férias para os finais de ano mas ficar em função de ter que contratar diversos serviços diferentes atraplha meus planos mas com a Air Ryoko nunca mais terei esses problemas.
-                        <cite>
-                        <img src="resources/img/angelo.jpg"/>Angelo Barrico Linhares
-                    </cite>
-                    </blockquote>
+                <div class="col span-1-of-4 box">
+                    <ion-icon name="tv-outline"></ion-icon>
+                    <h3>Design e Tecnologias modernas</h3>
+                    <p>
+                        Nossas salas são All Stadium 100% digital, poltronas com design avançado, telas importadas, som digital, tecnologia em projeção 3D.
+                    </p>
                 </div>
-                <div class="col span-1-of-3">
-                    <!--Terceira coluna -->
-                    <blockquote>
-                        Estava procurando uma empresa na qual possuise um pacote completo de viagem e estadia porém todos eram caros demais, mas a Air Ryoko me disponibilizou descontos especiais o que me fizeram escolhe-los!
-                        <cite>
-                        <img src="resources/img/alissa.jpg"/>Alissa Lessa Grande
-                    </cite>
-                    </blockquote>
+                <div class="col span-1-of-4 box">
+                    <ion-icon name="wallet-outline"></ion-icon>
+                    <h3>Acessível</h3>
+                    <p>
+                        Valores especiais para estudantes, clientes banrisul
+                    </p>
                 </div>
             </div>
         </section>
-    </div>
 
-    <footer>
-        <div></div>
-        <div></div>
-        <div>
-            <a>
-                <ion-icon name="logo-facebook" class="btfacebook">Facebook</ion-icon>
-            </a>
+        <footer>
+            <div>Teste</div>
 
             <div class="fb-page" data-href="https://www.facebook.com/GNCCinemas/?ref=ts" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
                 <blockquote cite="https://www.facebook.com/GNCCinemas/?ref=ts" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/GNCCinemas/?ref=ts">GNC Cinemas</a></blockquote>
             </div>
 
-        </div>
-    </footer>
-
+        </footer>
+    </div>
+    <!-- Script de utilização do JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- Script de utilização do Ion-icons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <!-- Script de utilização do Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- Script do Sticky Nav -->
+    <script>
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {
+            myFunction()
+        };
+
+        // Get the navbar
+        var navbar = document.getElementById("nabar");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
 </body>
 
 </html>

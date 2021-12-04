@@ -27,62 +27,59 @@
 <body>
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v12.0" nonce="LymXsJ2I"></script>
+    <header>
+        <nav id="navbar" class="navbar">
+            <div class="row">
+                <img src="vendors/css/img/logo.png" alt="Logo GNC Cinemas" class="logo">
+                <ul class="main-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#gnc">GNC</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#planos">Planos</a></li>
+                    <li><a href="#cardapio">Cardápio</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
     <div class="container">
-        <header>
-            <nav id="navbar" class="navbar">
-                <div class="row">
-                    <img src="vendors/css/img/logo.png" alt="saúde no prato logo" class="logo">
-                    <ul class="main-nav">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#galeria">Funcionamento</a></li>
-                        <li><a href="#diferencial">Galeria</a></li>
-                        <li><a href="#planos">Planos</a></li>
-                        <li><a href="#cardapio">Cardápio</a></li>
-                        <li><a href="#contato">Contato</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-
-        <section class="carousel">
-            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <section class="carosel">
+            <div id="carouselCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img id="escurece" src="resources/img/banner_familiaAdams2.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>A Família Addams 2 - Pé na Estrada</h5>
-                            <p>Os Addams se envolvem em aventuras mais malucas e se envolvem em confrontos hilariantes com todos os tipos de personagens desavisados..</p>
-                        </div>
+                        <img src="resources/img/banners/banner_clifford.png" class="d-block w-100 escurece" alt="Banner Clifford">
                     </div>
                     <div class="carousel-item">
-                        <img id="escurece" src="resources/img/banner_ghostbusters.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Ghostbusters - Mais Além</h5>
-                            <p>
-                                Uma mãe solteira resolve se mudar para uma pequena cidade do interior com seus filhos, e acaba descobrindo uma conexão com os Caça-Fantasmas originais e o que o seu avô deixou para trás como legado.
-                            </p>
-                        </div>
+                        <img src="resources/img/banners/banner_vigaristas.png" class="d-block w-100 escurece" alt="Banner Vigaristas">
                     </div>
                     <div class="carousel-item">
-                        <img id="escurece" src="resources/img/banner_homem_aranha.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Homem-Aranha Sem Volta Para Casa</h5>
-                            <p>O Homem-Aranha precisa lidar com as consequências da sua verdadeira identidade ter sido descoberta.</p>
-                        </div>
+                        <img src="resources/img/banners/banner_homem_aranha.png" class="d-block w-100 escurece" alt="Banner Homem Aranha">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="resources/img/banners/banner_missao_resgate.png" class="d-block w-100 escurece" alt="Banner Missão Resgate">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="resources/img/banners/banner_king_richard.png" class="d-block w-100 escurece" alt="Banner King Richard">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="resources/img/banners/banner_resident_evil.png" class="d-block w-100 escurece" alt="Banner Resident Evil">
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselCaptions" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
+                  <span class="visually-hidden">Anterior</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselCaptions" data-bs-slide="next">
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
+                  <span class="visually-hidden">Próximo</span>
                 </button>
             </div>
         </section>
@@ -92,62 +89,112 @@
             <ul class="images-showcase">
                 <li>
                     <figure class="photo">
-                        <img src="resources/img/dotonbori.jpg" alt="Travessia em Dotonbori" title="Travessia em Dotonbori" />
+                        <img src="resources/img/capas/capa_casa_gucci.jpg" alt="Casa Gucci" title="Casa Gucci" />
                     </figure>
                 </li>
                 <li>
                     <figure class="photo">
-                        <img src="resources/img/pagode_chureito.jpg" alt="Pagode de Chureito" title="Pagode de Chureito" />
+                        <img src="resources/img/capas/capa_clifford.jpg" alt="Clifford" title="Clifford" />
                     </figure>
                 </li>
                 <li>
                     <figure class="photo">
-                        <img src="resources/img/rua_de_shibuya.jpg" alt="Rua de Shibuya" title="Rua de Shibuya" />
+                        <img src="resources/img/capas/capa_eternals.jpg" alt="Eternals" title="Eternals" />
                     </figure>
                 </li>
                 <li>
                     <figure class="photo">
-                        <img src="resources/img/restaurante-tokyo.jpg" alt="Restaurante em Tokyo" title="Restaurante em Tokyo" />
+                        <img src="resources/img/capas/capa_encanto.jpg" alt="Encanto" title="Encanto" />
                     </figure>
                 </li>
                 <li>
                     <figure class="photo">
-                        <img src="resources/img/rua_de_akabane.jpg" alt="Rua de Akabane" title="Rua de Akabane" />
+                        <img src="resources/img/capas/capa_resident_evil.jpg" alt="Encanto" title="Encanto" />
                     </figure>
                 </li>
                 <li>
                     <figure class="photo">
-                        <img src="resources/img/rua_de_setagaya.jpg" alt="Rua de Setagaya" title="Rua de Setagaya" />
+                        <img src="resources/img/capas/capa_king_richard.jpg" alt="Encanto" title="Encanto" />
                     </figure>
                 </li>
                 <li>
                     <figure class="photo">
-                        <img src="resources/img/rua_de_tokyo.jpg" alt="Rua de Tokyo" title="Rua de Tokyo" />
+                        <img src="resources/img/capas/capa_vigaristas_em_hollywood.jpg" alt="Encanto" title="Encanto" />
                     </figure>
                 </li>
                 <li>
                     <figure class="photo">
-                        <img src="resources/img/shopping_em_tokyo.jpg" alt="Shopping em Tokyo" title="Shopping em Tokyo" />
+                        <img src="resources/img/capas/capa_encanto.jpg" alt="Encanto" title="Encanto" />
                     </figure>
                 </li>
             </ul>
         </section>
 
-        <section id="diferencial">
-            <h1>Typer.js is
-                <span class="typer" id="main" data-words="great,fun,lightweight,easy" data-delay="100" data-deleteDelay="1000"></span>
-                <span class="cursor" data-owner="main"></span>
-            </h1>
-            <p>the typing effect with a pure HTML interface</p>
-            <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
-        </section>
-
         <section id="planos">
-            <h2>Planos</h2>
+            <h2>Planos</h2><br>
+            <div>
+                <div class="plans">
+                    <ion-icon name="play-outline"></ion-icon><br>
+                    <p>
+                        <span>Beneficio 1</span>
+                        <span>Beneficio 2</span>
+                        <span>Beneficio 3</span>
+                    </p>
+                    <button type="button" class="btn btn-primary">Assinar</button>
+                </div>
+
+
+                <div class="plans">
+                    <ion-icon name="play-circle-outline"></ion-icon>
+                    <p>
+                        <span>Beneficio 1</span>
+                        <span>Beneficio 2</span>
+                        <span>Beneficio 3</span>
+                    </p>
+                    <button type="button" class="btn btn-primary">Assinar</button>
+                </div>
+
+
+                <div class="plans">
+                    <ion-icon name="play-skip-forward-circle-outline"></ion-icon>
+                    <p>
+                        <span>Beneficio 1</span>
+                        <span>Beneficio 2</span>
+                        <span>Beneficio 3</span>
+                    </p>
+                    <button type="button" class="btn btn-primary">Assinar</button>
+                </div>
+            </div>
         </section>
 
         <section id="cardapio">
             <h2>Cardápio</h2>
+            <div>
+                <figure>
+                    <img src="resources/img/cardapio/pipoca.jpg">
+                    <figcaption>teste</figcaption>
+                </figure>
+                <figure>
+                    <img src="resources/img/cardapio/refrigerantes.jpg">
+                    <figcaption>teste</figcaption>
+                </figure>
+                <figure>
+                    <img src="resources/img/cardapio/kit_guloseimas.jpg">
+                    <figcaption>teste</figcaption>
+                </figure>
+                <figure>
+                    <img src="resources/img/cardapio/pipoca.jpg">
+                    <figcaption>teste</figcaption>
+                </figure>
+                <figure>
+                    <img src="resources/img/cardapio/pipoca.jpg">
+                    <figcaption>teste</figcaption>
+                </figure>
+                <figure>
+                    <img src="resources/img/cardapio/pipoca.jpg">
+                    <figcaption>teste</figcaption>
+                </figure>
+            </div>
         </section>
 
         <section id="contato">
@@ -155,21 +202,21 @@
             <form id="formulario_contato" action="php/envio.php" method="post">
                 <div>
                     <div>
-                        <label for="nome">Nome:</label>
+                        <label for="nome">Nome Completo:</label>
                         <input type="text" id="nome" />
-                    </div>
-                    <div>
+
+
                         <label for="email">E-mail:</label>
                         <input type="email" id="email" />
                     </div>
                 </div>
                 <div>
                     <div>
-                        <label for="telefone1">E-mail:</label>
+                        <label for="telefone1">Telefone Residencial:</label>
                         <input type="tel" id="telefone1" />
-                    </div>
-                    <div>
-                        <label for="telefone2">E-mail:</label>
+
+
+                        <label for="telefone2">Telefone Celular:</label>
                         <input type="tel" id="telefone2" />
                     </div>
                 </div>
@@ -177,11 +224,10 @@
                     <div>
                         <p>Possui nosso Plano Mensal?</p>
                         <input type="radio" id="sim" name="plano_mensal" value="sim">
-                        <label for="sim">Sim</label><br>
+                        <label for="sim">Sim </label>
                         <input type="radio" id="nao" name="plano_mensal" value="nao">
-                        <label for="nao">Não</label><br>
-                    </div>
-                    <div>
+                        <label for="nao">Não </label>
+                        <br>
                         <label for="msg">Mensagem:</label>
                         <textarea id="msg"></textarea>
                     </div>
@@ -190,7 +236,7 @@
 
         </section>
 
-        <section id="funcionamento">
+        <section id="gnc">
             <h2>Funcionamento</h2>
             <div class="row">
                 <div class="col span-1-of-4 box">
@@ -220,10 +266,12 @@
         <footer>
             <div>Teste</div>
 
-            <div class="fb-page" data-href="https://www.facebook.com/GNCCinemas/?ref=ts" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                <blockquote cite="https://www.facebook.com/GNCCinemas/?ref=ts" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/GNCCinemas/?ref=ts">GNC Cinemas</a></blockquote>
+            <div>
+                <h3>Redes Sociais</h3>
+                <div class="fb-page" data-href="https://www.facebook.com/GNCCinemas/?ref=ts" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                    <blockquote cite="https://www.facebook.com/GNCCinemas/?ref=ts" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/GNCCinemas/?ref=ts">GNC Cinemas</a></blockquote>
+                </div>
             </div>
-
         </footer>
     </div>
     <!-- Script de utilização do JQuery -->
@@ -241,7 +289,7 @@
         };
 
         // Get the navbar
-        var navbar = document.getElementById("nabar");
+        var navbar = document.getElementById("navbar");
 
         // Get the offset position of the navbar
         var sticky = navbar.offsetTop;

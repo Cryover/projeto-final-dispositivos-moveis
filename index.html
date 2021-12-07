@@ -34,7 +34,7 @@
 <body>
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v12.0" nonce="LymXsJ2I"></script>
-    <div class="container">
+    <div class="principal">
         <header>
             <nav id="navbar">
                 <div class="row">
@@ -48,36 +48,37 @@
                         <li><a href="#contato">Contato</a></li>
                     </ul>
                 </div>
-
-                <!-- Top Navigation Menu -->
-                <div class="topnav">
-                    <a href="#" class="active">Home</a>
-                    <!--<img src="vendors/css/img/logo.png" alt="Logo GNC Cinemas" class="logo">-->
-                    <!-- Navigation links (hidden by default) -->
-                    <div id="myLinks">
-                        <ul class="mob-nav">
-                            <li>
-                                <a href="#gnc">GNC</a></li>
-                            <li>
-                                <a href="#filmes_em_cartaz">Filmes em Cartaz</a></li>
-                            <li>
-                                <a href="#planos">Planos</a></li>
-                            <li>
-                                <a href="#cardapio">Cardápio</a></li>
-                            <li>
-                                <a href="#contato">Contato</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                </div>
-
             </nav>
+
+            <!-- Top Navigation Menu -->
+            <nav class="topnav">
+                <a href="#" class="active">Home</a>
+                <!--<img src="vendors/css/img/logo.png" alt="Logo GNC Cinemas" class="logo">-->
+                <!-- Navigation links (hidden by default) -->
+                <div id="myLinks">
+                    <ul class="mob-nav">
+                        <li>
+                            <a href="#gnc">GNC</a></li>
+                        <li>
+                            <a href="#filmes_em_cartaz">Filmes em Cartaz</a></li>
+                        <li>
+                            <a href="#planos">Planos</a></li>
+                        <li>
+                            <a href="#cardapio">Cardápio</a></li>
+                        <li>
+                            <a href="#contato">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
+
         </header>
         <section class="carosel">
+            <!-- <h2>Filmes em Destaque</h2> -->
             <div id="carouselCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -401,6 +402,7 @@
         <hr>
         <section id="cardapio">
             <h2>Cardápio</h2>
+            <!-- Aumentar Fonte e Imagens -->
             <div>
                 <figure>
                     <img src="resources/img/cardapio/pipoca.jpg" alt="Pipoca" title="Pipoca">
@@ -433,27 +435,27 @@
         <section id="gnc">
             <h2>Funcionamento</h2>
             <div class="row">
-                <div class="col span-1-of-4 box">
+                <article class="col span-1-of-4 box">
                     <ion-icon name="ticket-outline"></ion-icon>
                     <h3>Terminais de venda automática de ingressos</h3>
                     <p>
                         Bilheteria informatizadas, vendas de ingressos pela internet, lugares marcados, débito em conta, são apenas alguns exemplos do que os espectadores se acostumaram a encontrar em primeira mão, nas salas do GNC CINEMAS.
                     </p>
-                </div>
-                <div class="col span-1-of-4 box">
+                </article>
+                <article class="col span-1-of-4 box">
                     <ion-icon name="tv-outline"></ion-icon>
                     <h3>Design e Tecnologias modernas</h3>
                     <p>
                         Nossas salas são All Stadium 100% digital, poltronas com design avançado, telas importadas, som digital, tecnologia em projeção 3D.
                     </p>
-                </div>
-                <div class="col span-1-of-4 box">
+                </article>
+                <article class="col span-1-of-4 box">
                     <ion-icon name="wallet-outline"></ion-icon>
                     <h3>Acessível</h3>
                     <p>
                         Valores especiais para estudantes, clientes banrisul
                     </p>
-                </div>
+                </article>
             </div>
         </section>
         <hr>
@@ -498,6 +500,7 @@
         <hr>
         <footer>
             <div>
+                <!-- Colocar os links dentro de um nav -->
                 <h3>Redes Sociais</h3>
                 <div>
                 </div>

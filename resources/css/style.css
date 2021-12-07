@@ -19,6 +19,7 @@ html {
     margin: 0px;
     padding: 0px;
     background-color: #fff;
+    min-width: 400px;
     /*Define a cor do fundo*/
     color: #555;
     font-family: 'Lato', 'Arial', sans-serif;
@@ -36,7 +37,7 @@ body {
     color: #ffffff;
 }
 
-.container {
+.principal {
     width: 80%;
     margin: 0 auto;
 }
@@ -337,6 +338,10 @@ section {
     text-decoration: none;
 }
 
+.carosel h2 {
+    visibility: hidden;
+}
+
 
 /* Page content */
 
@@ -550,7 +555,7 @@ footer>div {
 }
 
 @media screen and (max-width: 1000px) {
-    .container {
+    .principal {
         width: 100%;
     }
 }
@@ -562,7 +567,7 @@ footer>div {
     .topnav {
         display: block;
     }
-    .container {
+    .principal {
         width: 100%;
     }
     .row {

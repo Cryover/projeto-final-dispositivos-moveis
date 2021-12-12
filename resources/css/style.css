@@ -10,19 +10,17 @@
 /*Zerando bordas para ter maior domínio sobre os box*/
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 html {
     margin: 0px;
     padding: 0px;
-    background-color: #fff;
-    min-width: 400px;
+    background-color: #000;
+    min-width: 370px;
     /*Define a cor do fundo*/
-    color: #555;
-    font-family: 'Lato', 'Arial', sans-serif;
+    color: #000;
+    font-family: 'Readex Pro', sans-serif;
     /*a terceira opção é qualquer fonte daquela família, note que o nome da família não esta entre aspas.*/
     font-weight: 300;
     /*de acordo com a fonte que importamos*/
@@ -35,10 +33,11 @@ html {
 body {
     background-color: #000;
     color: #ffffff;
+    min-width: 370px;
 }
 
 .principal {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -57,6 +56,11 @@ p {
     color: #fff;
 }
 
+a {
+    text-decoration: none;
+    color: #008556;
+}
+
 .white {
     color: #fff;
 }
@@ -69,29 +73,30 @@ hr {
     margin-bottom: 20px;
 }
 
-.carousel .carousel-item {
-    height: 600px;
+.fill {
+    width: 100%;
+    height: 100% !important;
 }
 
 .carousel-item img {
-    position: absolute;
+    position: relative;
     object-fit: cover;
     top: 0;
     left: 0;
-    min-height: 600px;
 }
 
-.carousel-item img::after {
+.carousel-inner,
+.carousel-item,
+.carousel-item:active {
+    height: auto;
+}
+
+.carousel-item:after,
+.carousel-item:active {
     background-image: linear-gradient(to right, rgba(250, 0, 0, 0) 0px, rgba(250, 0, 0, 0) 100%);
     background-image: linear-gradient(to left, rgba(250, 0, 0, 0) 0px, rgba(250, 0, 0, 0) 100%);
     background-image: linear-gradient(to top, rgba(250, 0, 0, 0) 0px, rgba(250, 0, 0, 0) 100%);
     background-image: linear-gradient(to bottom, rgba(250, 0, 0, 0) 0px, rgba(250, 0, 0, 0) 100%);
-}
-
-#fullCarousel {
-    position: absolute;
-    width: 100%;
-    top: 0;
 }
 
 
@@ -102,13 +107,11 @@ hr {
     flex-wrap: nowrap;
     max-width: 1140px;
     margin: 0 auto 0 auto;
+    height: auto;
 }
 
 header {
-    background-size: cover;
-    background-position: center;
-    height: 200px;
-    background-attachment: fixed;
+    height: 130px;
 }
 
 
@@ -121,15 +124,6 @@ ion-icon {
     color: #008556;
     /*cor da fonte = cor do ícone*/
     margin-bottom: 10px;
-}
-
-.btn-primary,
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:visited,
-.btn-primary:focus {
-    background-color: #00579e;
-    border-color: #00579e;
 }
 
 h1,
@@ -189,8 +183,20 @@ h3 {
     margin-bottom: 30px;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #000;
+    height: 150px;
+}
+
 section {
     padding-bottom: 30px;
+}
+
+section:target {
+    padding-top: 70px;
 }
 
 .long-copy {
@@ -201,67 +207,8 @@ section {
     /*15% para cada lado*/
 }
 
-.btn {
-    display: inline-block;
-    padding: 10px 30px;
-    font-weight: 300;
-    text-decoration: none;
-    border-radius: 200px;
-    color: #fff;
-}
-
-.btn-ghost {
-    border: 1px solid #c81a24;
-    color: #c81a24;
-}
-
-.btn-full {
-    background-color: #c81a24;
-    border: 1px solid #c81a24;
-    color: #fff;
-}
-
-.btn:link,
-.btn:visited {
-    display: inline-block;
-    padding: 10px 30px;
-    font-weight: 300;
-    text-decoration: none;
-    border-radius: 200px;
-    color: #fff;
-    transition: background-color 0.2s, border 0.2s, color 0.2s;
-    /*a transição da cor do fundo, da borda e da fonte deve demorar 0.2 segundos*/
-}
-
-.btn-full:link,
-.btn-full:visited {
-    background-color: #c81a24;
-    border: 1px solid #c81a24;
-    color: #fff;
-    margin-right: 15px;
-    /*espaçamento entre os btões*/
-}
-
-.btn-ghost:link,
-.btn-ghost:visited {
-    border: 1px solid #c81a24;
-    color: #e67e22;
-}
-
-.btn:hover,
-.btn:active {
-    background-color: #c81a24;
-}
-
-.btn-full:hover,
-.btn-full:active {
-    border: 1px solid #c81a24;
-}
-
-.btn-ghost:hover,
-.btn-ghost:active {
-    border: 1px solid #c81a24;
-    color: #fff;
+input.radio {
+    display: inline !important;
 }
 
 .logo {
@@ -272,9 +219,11 @@ section {
     /*colocar um espaçamento acima da logo para baixar ela*/
 }
 
+#navbar {
+    width: 100%;
+}
+
 .main-nav {
-    float: right;
-    list-style: none;
     /*Se livra dos bullets - bolinhas pretas - marcadores*/
     margin-top: 50px;
     /*colocar um espaçamento acima da lista para baixar ela*/
@@ -282,9 +231,13 @@ section {
 }
 
 .main-nav li {
-    display: inline-block;
+    list-style: none;
     margin-left: 40px;
     /*espaçamento entre os items da lista*/
+}
+
+.mob-nav {
+    list-style-type: none;
 }
 
 .main-nav li a {
@@ -319,11 +272,7 @@ section {
 #navbar {
     overflow: hidden;
     background-color: transparent;
-    z-index: 9;
     background-image: linear-gradient(rgb(0, 0, 0), transparent);
-    position: -webkit-sticky;
-    /* Safari */
-    position: sticky;
 }
 
 
@@ -336,10 +285,6 @@ section {
     text-align: center;
     padding: 14px;
     text-decoration: none;
-}
-
-.carosel h2 {
-    visibility: hidden;
 }
 
 
@@ -381,8 +326,9 @@ section {
 .images-showcase li {
     /*permite outros elementos ao lado*/
     /*Faz com que os elementos sejam colocados lado a lado*/
-    width: 25%;
+    width: 23%;
     /*cada item da lista terá 25% de largura em relação a tela... 100/4*/
+    margin: 10px;
 }
 
 .photo {
@@ -393,10 +339,12 @@ section {
     border-radius: 10px;
     transition-delay: 1s;
     transition: all 1s;
+    width: 100%;
+    transform: scale(0.9);
 }
 
 .photo img:hover {
-    transform: scale(1.1);
+    transform: scale(1);
     z-index: 5000;
 }
 
@@ -408,40 +356,92 @@ h6 {
 }
 
 #planos div {
-    display: inline-flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    padding: 30px;
-    margin: 20px;
+    display: flex;
+    margin-left: 10px;
+    flex-wrap: wrap;
+}
+
+#planos h3 {
+    text-align: center;
+}
+
+.plans ion-icon {
+    margin: auto;
 }
 
 .plans {
     border: 5px solid #008556;
     border-radius: 10px;
+    margin-bottom: 20px;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 30%;
     flex-direction: column;
+}
+
+.plans h3 {
+    margin-top: 20px;
+    height: 50px;
+}
+
+.plans p {
+    height: 150px;
+}
+
+.plans p {
+    text-align: left;
+}
+
+.plans button {
+    margin: auto;
+}
+
+.btn {
+    background-color: #00579e;
+    border-radius: 50px;
+    height: 50px;
+    width: 200px;
+    outline: none;
+    border: none;
+    color: #ddd;
+    max-width: 100%;
+}
+
+.btn:hover {
+    background-color: #c81a24;
+    transition: all 0.3s;
+}
+
+.btn:active {
+    outline: 5px dashed rgb(30, 255, 0);
+}
+
+.btn:focus {
+    outline: 5px dashed rgb(30, 255, 0);
+    transition: all 0.3s;
 }
 
 #cardapio div {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    height: 350px;
+    margin: auto;
 }
 
 #cardapio div figure {
-    width: 50%;
-    display: flex;
-    margin: 10px;
-}
-
-#cadapio div figure figcaption {
-    margin-left: 20px;
+    width: 20%;
+    padding: 20px;
 }
 
 #cardapio div figure img {
-    height: 80px;
-    width: 100px;
+    height: 120px;
+    width: 120px;
     border-radius: 50px 15px;
+}
+
+.fig {
+    padding-left: 0px;
+    font-size: 25px;
 }
 
 #funcionamento {
@@ -449,20 +449,41 @@ h6 {
 }
 
 #formulario_contato {
-    display: inline-flex;
-    width: 32%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#pcontato {
+    text-align: center;
+    margin: 50px;
+    height: 100px;
 }
 
 #formulario_contato div {
-    padding: 30px;
+    width: 30%;
+    margin-left: 20px;
+    padding: 10px;
 }
 
-#formulario_contato div label {
+#formulario_contato div {
     padding-bottom: 10px;
+}
+
+.lblform {
+    width: 100%;
 }
 
 #formulario_contato div input {
     margin-bottom: 20px;
+    max-width: 100%;
+}
+
+#formulario_contato div label {
+    margin-bottom: 10px;
+}
+
+#formulario_contato div textarea {
+    max-width: 100%;
 }
 
 #formulario_contato div input,
@@ -472,26 +493,37 @@ textarea {
 }
 
 footer {
-    display: inline-flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-wrap: wrap;
 }
 
-footer>div {
-    width: 100%;
-    border-radius: 5px;
-    border: 5px solid rgb(255, 255, 255);
-    margin-right: 10px;
+footer nav {
+    width: 31%;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+}
+
+footer div {
+    width: 31%;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+}
+
+footer nav ul {
+    list-style: none;
+}
+
+footer nav a {
+    width: max-content;
+    padding: 5px;
 }
 
 .ion-icon-footer {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
 }
-
-
-/* CSS da parte Mobile */
 
 
 /* Style the navigation menu */
@@ -505,6 +537,10 @@ footer>div {
 
 
 /* Hide the links inside the navigation menu (except for logo/home) */
+
+.topnav #myLinks {
+    display: none;
+}
 
 
 /* Style navigation menu links */
@@ -524,7 +560,6 @@ footer>div {
     background: black;
     display: block;
     position: absolute;
-    height: 200px;
     right: 0;
     top: 0;
 }
@@ -541,67 +576,164 @@ footer>div {
 /* Style the active link (or home/logo) */
 
 .active {
-    background-color: #04AA6D;
+    background-color: #008556;
     color: white;
 }
 
+#btnform {
+    bottom: 0px;
+}
 
-/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+#btnform2 {
+    display: none;
+}
 
-@media screen and (max-width: 1230px) {
-    #contato form {
-        flex-wrap: wrap;
+#nav_sociais {
+    flex-grow: 2;
+    width: 80px;
+}
+
+#nav_sociais ul {
+    list-style-type: none;
+}
+
+#nav-sociais a {
+    width: fit-content;
+}
+
+
+/* CSS da parte Mobile */
+
+@media screen and (max-width: 1800px) {
+    .carosel {
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .images-showcase li {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 1130px) {
+    #cardapio div figure {
+        width: 50%;
     }
 }
 
 @media screen and (max-width: 1000px) {
     .principal {
-        width: 100%;
+        width: 95%;
     }
 }
 
-@media screen and (max-width: 840px) {
-    .logo {
-        height: 80px;
+@media screen and (max-width: 935px) {
+    .plans {
+        width: 45%;
+    }
+    .plans p {
+        text-align: center;
+    }
+    .advanced {
+        flex-grow: 4;
+        margin-right: 25px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    header {
+        height: 180px;
+    }
+    #formulario_contato div {
+        width: 47%;
+    }
+    #formulario_contato div input {
+        max-width: 100%;
+    }
+    #btnform {
+        display: none;
+    }
+    #btnform2 {
+        display: block;
+        margin-top: 25px;
+    }
+    footer nav {
+        width: 30%;
+    }
+    .fb-page {
+        flex-grow: 4;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .principal {
+        width: 100%;
+    }
+    header {
+        margin-bottom: 10px;
+        height: 60px;
+    }
+    .images-showcase li {
+        width: 30%;
+    }
+    #navbar {
+        display: none;
     }
     .topnav {
         display: block;
     }
-    .principal {
-        width: 100%;
+    #cardapio div {
+        padding: 30px;
     }
-    .row {
-        display: none;
+    #carosel {
+        padding-top: 1500px;
     }
-    .header a {
-        text-align: left;
+    .row article {
+        padding: 20px;
+        padding-left: 30px;
     }
-    .mob-nav {
-        display: inline-flex;
+    #formulario_contato {
+        flex-direction: column;
     }
-    .mob-nav li {
-        list-style: none;
+    #formulario_contato div {
+        padding: 15px;
+        width: 80%;
+        margin: auto;
     }
-    .header-right {
-        float: none;
-    }
-    .images-showcase li {
-        /*permite outros elementos ao lado*/
-        /*Faz com que os elementos sejam colocados lado a lado*/
-        width: 30%;
-        /*cada item da lista terá 25% de largura em relação a tela... 100/4*/
-    }
-}
-
-@media screen and (max-width: 800px) {
-    #planos div {
-        flex-wrap: wrap;
+    .input_form {
+        width: 90%;
     }
 }
 
 @media screen and (max-width: 600px) {
-    #contato form div {
-        padding-top: 10px;
-        padding-bottom: 10px;
+    .images-showcase li {
+        width: 29%;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .row article {
+        width: 100%;
+        margin: 0 auto;
+    }
+    footer div {
+        width: 45%;
+    }
+    footer nav {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .images-showcase li {
+        width: 300px;
+        margin: auto;
+    }
+    #formulario_contato div {
+        width: 100%;
+    }
+    .plans {
+        width: 100%;
     }
 }

@@ -19,7 +19,6 @@ html {
     background-color: #000;
     min-width: 370px;
     /*Define a cor do fundo*/
-    color: #000;
     font-family: 'Readex Pro', sans-serif;
     /*a terceira opção é qualquer fonte daquela família, note que o nome da família não esta entre aspas.*/
     font-weight: 300;
@@ -37,7 +36,7 @@ body {
 }
 
 .principal {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -68,7 +67,6 @@ a {
 hr {
     border: 1px solid #c81a24;
     background-color: #c81a24;
-    color: #c81a24;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -196,7 +194,7 @@ section {
 }
 
 section:target {
-    padding-top: 70px;
+    padding-top: 150px;
 }
 
 .long-copy {
@@ -390,7 +388,7 @@ h6 {
 }
 
 .plans p {
-    text-align: left;
+    text-align: center;
 }
 
 .plans button {
@@ -667,6 +665,9 @@ footer nav a {
 }
 
 @media screen and (max-width: 700px) {
+    h2 {
+        font-size: 30px;
+    }
     .principal {
         width: 100%;
     }
@@ -703,6 +704,9 @@ footer nav a {
     }
     .input_form {
         width: 90%;
+    }
+    section:target {
+        padding-top: 80px;
     }
 }
 
